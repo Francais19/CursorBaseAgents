@@ -7,8 +7,9 @@
 2. Подставь найденные значения в следующие файлы:
    - `.cursor/config.json`
    - `.cursor/rules/testing.mdc`
-3. Убедись, что `.cursor/config.json` остался валидным JSON.
-4. Остальные файлы `.cursor` не меняй.
+3. Создай `.cursor/mcp.json` в каталоге проекта для инструментов, специфичных для этого проекта, если такого файла еще нет.
+4. Убедись, что `.cursor/config.json` и `.cursor/mcp.json` остались валидными JSON.
+5. Остальные файлы `.cursor` не меняй.
 
 ## Как определять значения
 - Используй код проекта, `pyproject.toml`, `requirements*.txt`, `poetry.lock`, `uv.lock`, `Pipfile`, `Dockerfile`, README, структуру каталогов и точки входа.
