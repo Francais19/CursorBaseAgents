@@ -1,0 +1,9 @@
+{
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "./hooks/rtk-rewrite.sh"
+      }
+    ]
+  }
+}

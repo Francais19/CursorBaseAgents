@@ -1,0 +1,21 @@
+---
+description: Базовые требования безопасности для Python-проектов
+alwaysApply: true
+---
+
+# Security
+
+Базовые требования безопасности для Python-проектов.
+
+## Всегда проверяй
+- секреты и токены не попали в код, логи, tests, docs
+- входные данные валидируются на границе системы
+- authz не путается с authn
+- ошибки не раскрывают чувствительные детали
+- SQL/command/template injection риски закрыты
+- upload/path traversal/deserialization риски учтены
+
+## Для web/API
+- проверяй rate limiting, CORS, trusted hosts, session/cookie flags
+- для JWT/токенов проверяй expiry, audience, issuer, rotation
+- для admin endpoints проверяй role boundaries

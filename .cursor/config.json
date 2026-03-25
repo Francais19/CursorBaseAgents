@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "project_type": "python",
+  "documentation": {
+    "enabled": {
+      "plans": true,
+      "reports": true,
+      "issues": false,
+      "adr": true
+    }
+  },
+  "commands": {
+    "test": "pytest -q",
+    "test_verbose": "pytest -vv",
+    "test_changed": "pytest -q",
+    "lint": "flake8 .",
+    "lint_fix": "black .",
+    "format": "black .",
+    "typecheck": "mypy .",
+    "security": "bandit -r . -x tests",
+    "dead_code": "vulture .",
+    "imports": "python -m compileall ."
+  },
+  "quality": {
+    "minimum_test_expectation": "new_or_changed_logic_must_have_tests_or_explicit_reason",
+    "max_debug_attempts": 3,
+    "review_severity_levels": [
+      "critical",
+      "high",
+      "medium",
+      "low"
+    ]
+  },
+  "project_hints": {
+    "framework": "{{APP_FRAMEWORK}}",
+    "async_stack": "{{ASYNC_STACK}}",
+    "orm": "{{ORM}}",
+    "package_manager": "{{PACKAGE_MANAGER}}",
+    "integrations": "{{INTEGRATIONS}}"
+  }
+}

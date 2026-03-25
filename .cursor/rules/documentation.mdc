@@ -1,0 +1,29 @@
+---
+description: Правила документирования в проекте
+alwaysApply: true
+---
+
+# Documentation
+
+Документируй любую функцию, класс и так далее. Если это python, то соответственно docstring.
+
+## Структура
+Тут пример документации функции:
+"""This is a module-level docstring."""
+
+def my_function(param1, param2):
+    """
+    Summarize the function's behavior.
+
+    Args:
+        param1 (int): The first parameter.
+        param2 (str): The second parameter.
+
+    Returns:
+        bool: True if successful, False otherwise.
+    """
+    # function body goes here
+    pass
+
+## Принципы
+- коротко, проверяемо, без маркетинговой воды

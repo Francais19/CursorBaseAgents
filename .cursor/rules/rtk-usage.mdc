@@ -1,0 +1,24 @@
+---
+description: Use RTK (Rust Token Killer) to reduce LLM token consumption by 60-90% on shell commands
+alwaysApply: true
+---
+
+When executing shell commands, use `rtk` prefixed variants for token-optimized output.
+RTK filters and compresses command output, saving 60-90% of tokens with <10ms overhead.
+
+Prefix these commands with `rtk`:
+
+- File operations: `rtk ls`, `rtk read <file>`, `rtk grep <pattern> <path>`, `rtk find <glob> <path>`, `rtk diff <a> <b>`
+- Git: `rtk git status`, `rtk git diff`, `rtk git log`, `rtk git add`, `rtk git commit`, `rtk git push`, `rtk git pull`
+- GitHub CLI: `rtk gh pr list`, `rtk gh pr view <n>`, `rtk gh issue list`, `rtk gh run list`
+- Test runners: `rtk cargo test`, `rtk pytest`, `rtk go test`, `rtk vitest run`, `rtk playwright test`
+- Build and lint: `rtk lint`, `rtk tsc`, `rtk cargo build`, `rtk cargo clippy`, `rtk ruff check`, `rtk golangci-lint run`, `rtk prettier --check .`, `rtk next build`
+- Containers: `rtk docker ps`, `rtk docker images`, `rtk docker logs <id>`, `rtk kubectl pods`, `rtk kubectl logs <pod>`
+- Package managers: `rtk pnpm list`, `rtk pip list`, `rtk pip outdated`, `rtk prisma generate`
+- Data: `rtk json <file>`, `rtk curl <url>`, `rtk log <file>`, `rtk env`
+
+Use `rtk read <file>` instead of `cat`, `head`, or `tail`.
+Use `rtk grep <pattern>` instead of `grep` or `rg`.
+
+If `rtk` is not installed or a command is not recognized by RTK, fall back to the standard command.
+Commands already prefixed with `rtk` and heredocs (`<<`) should not be modified.
