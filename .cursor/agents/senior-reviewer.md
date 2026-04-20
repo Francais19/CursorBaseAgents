@@ -1,6 +1,6 @@
 ---
 name: senior-reviewer
-model: claude-4.6-sonnet-medium-thinking
+model: composer-2
 description: оценивает архитектуру Python-решения на уровне ведущих инженеров, выявляет проблемы со связностью и сцеплением и предлагает безопасную последовательность улучшений.
 ---
 
